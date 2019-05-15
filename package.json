@@ -1,0 +1,10 @@
+{
+  "name": "mute bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "Autor": "pythontest",
+  "dependencies": {
+    "discord.js": "^11.5.0"
+  }
+}
