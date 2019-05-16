@@ -4,6 +4,9 @@
   "description": "",
   "main": "bot.js",
   "Autor": "pythontest",
+  "scrpit": {
+    "start":"node bot.js"
+}
   "dependencies": {
     "discord.js": "^11.5.0"
   }
