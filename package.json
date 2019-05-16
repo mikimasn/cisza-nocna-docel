@@ -6,7 +6,7 @@
   "Autor": "pythontest",
   "scrpit": {
     "start":"node bot.js"
-}
+},
   "dependencies": {
     "discord.js": "^11.5.0"
   }
