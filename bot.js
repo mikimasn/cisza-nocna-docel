@@ -1,6 +1,5 @@
 
 const Discord = require("discord.js");
-const auth = require("./auth.json");
 const Words = ["fak","kurwa","shit"];
 const client = new Discord.Client();
 const users = [];
@@ -34,4 +33,4 @@ client.on("message", (message) => { dates = Date();
                                        }
 
                                   })
-client.login(auth.token);
+client.login(process.env.BOT_TOKEN);
