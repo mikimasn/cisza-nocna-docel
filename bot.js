@@ -20,7 +20,7 @@ client.on("message", (message) => { dates = Date();
                                    console.log(howerssplit[0]);
                                    console.log(howerssplit[1]);
                                    console.log(howerssplit[2]);
-                                   if(howerssplit[0] >= 22 || howerssplit[0] < 6)
+                                   if(howerssplit[0] >= 20 || howerssplit[0] < 4)
                                        {
                                            if (message.author.tag == client.user.tag)
                                                {
