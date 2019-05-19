@@ -60,6 +60,7 @@ client.on("message", (message) => {
                     czeste = true;
                     czy = true;
                     message.reply("pomyślnie ustawiłem")
+                    console.log("pomyślnie ustawiłem");
                 }
             else
                 {
