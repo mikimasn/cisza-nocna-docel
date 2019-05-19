@@ -23,7 +23,7 @@ client.on("ready", () => {
         
 
 
-                                   if(howerssplit[1] >=20 || howerssplit[1] < 4)
+                                   if(howerssplit[0] >=20 || howerssplit[0] < 4)
                                        {
                                            if (!czy)
                                                {
