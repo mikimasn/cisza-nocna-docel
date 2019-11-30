@@ -7,7 +7,6 @@ var dates = Date();
 var timeh = dates;
 var timem = dates;
 const times = dates;
-const auth = require("./auth.json");
 var timessplit;
 var howerssplit;
 var czy = false;
@@ -73,4 +72,4 @@ client.on("message", (message) => {
    }
   })
 
-client.login(auth.token);
+client.login(process.env.BOT_TOKEN);
