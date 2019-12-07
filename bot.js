@@ -14,6 +14,9 @@ var czeste = false;
 var role;
 client.on("ready", () => {
  console.log("I am ready!");
+ if(guild.available){
+  var users = guild.members.Array();
+ }
     client.setInterval(function ()
 {
      dates = Date();
