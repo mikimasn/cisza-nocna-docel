@@ -79,8 +79,8 @@ client.on("message", (message) => {
   message.reply("zebrałem liste użytkowników");
   message.reply(usercount);
   for(let ixxyaz=0;ixxyaz<usercount;ixxyaz++){
-   if(!userlist[ixxyaz].user.username == null){
-    message.reply(userlist[ixxyaz].user.username.ToString());
+   if(!userlist[ixxyaz].user.tag == null){
+    message.reply(userlist[ixxyaz].user.tag);
    }
    else{console.log("null");}
   }
