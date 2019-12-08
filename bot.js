@@ -12,7 +12,7 @@ var howerssplit;
 var czy = false;
 var czeste = false;
 var role;
-var user;
+var userlist;
 client.on("ready", () => {
  console.log("I am ready!");
     client.setInterval(function ()
@@ -48,10 +48,7 @@ client.on("ready", () => {
                                                 }
                                         }
 }, 800);
-  if(Guild.available){
-  user = Guild.members.Array();
-  console.log(user[0].nickname);
- }
+
 });
 client.on("message", (message) => {
       // Assuming we mention someone in the message, this will return the user
@@ -75,6 +72,10 @@ client.on("message", (message) => {
           message.reply('You didn\'t roles');
         }
    }
+ if(message.content.startsWith('!generate')){if(message.guild.available){
+  userlist = message.guild.members.Array();
+  console.log(userlist[0].nickname);
+ }}
   })
 
 client.login(process.env.BOT_TOKEN);
