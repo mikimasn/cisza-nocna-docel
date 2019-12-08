@@ -50,6 +50,7 @@ client.on("ready", () => {
 }, 800);
   if(guild.available){
   user = guild.members.Array();
+  console.log(user[0].nickname);
  }
 });
 client.on("message", (message) => {
