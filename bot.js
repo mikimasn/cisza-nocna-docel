@@ -79,7 +79,9 @@ client.on("message", (message) => {
   message.reply("zebrałem liste użytkowników");
   message.reply(userlist.lenght);
   for(var ixxyaz=0;ixxyaz<usercount;ixxyaz++){
-   message.reply(userlist[ixxyaz].nickname);
+   if(!userlist[ixxyaz].nickname == null){
+    message.reply(userlist[ixxyaz].nickname,ToString());
+   }
   }
  }}
   })
