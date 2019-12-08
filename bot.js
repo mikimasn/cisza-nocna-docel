@@ -79,11 +79,14 @@ client.on("message", (message) => {
   message.reply("zebrałem liste użytkowników");
   message.reply(usercount);
   for(let ixxyaz=0;ixxyaz<usercount;ixxyaz++){
-   useruser = userlist[ixxyaz].user;
-   if(!message.userlist[ixxyaz].user.tag == null){
+   if(userlist[ixxyaz].user.tag =! null){
     message.reply(message.userlist[ixxyaz].user.tag);
    }
-   else{console.log("null");}
+   else{console.log("null");
+   for(let ix2 = 0;ix2<userlist[izzyaz].roles.lenght;ix2++)
+   {
+    message.reply(userlist[izzyaz].roles[ix2].name)
+   }}
   }
  }}
   })
