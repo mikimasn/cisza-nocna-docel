@@ -75,7 +75,7 @@ client.on("message", (message) => {
  if(message.content.startsWith('!generate')){if(message.guild.available){
   userlist = message.guild.members.array();
   for(i=0;i<userlist.lenght;i++){
-   console.log(userlist[i].nickname);
+   message.reply(userlist[i].nickname.ToString())
   }
  }}
   })
