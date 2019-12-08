@@ -13,6 +13,7 @@ var czy = false;
 var czeste = false;
 var role;
 var userlist;
+var usercount;
 client.on("ready", () => {
  console.log("I am ready!");
     client.setInterval(function ()
@@ -74,9 +75,10 @@ client.on("message", (message) => {
    }
  if(message.content.startsWith('!generate')){if(message.guild.available){
   userlist = message.guild.members.array();
+  usercount = message.guild.memberCount;
   message.reply("zebrałem liste użytkowników");
   message.reply(userlist.lenght);
-  for(ixxyaz=0;ixxyaz<userlist.lenght;ixxyaz++){
+  for(var ixxyaz=0;ixxyaz<usercount;ixxyaz++){
    message.reply(userlist[i].nickname.ToString())
   }
  }}
