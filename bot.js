@@ -79,7 +79,7 @@ client.on("message", (message) => {
   message.reply("zebrałem liste użytkowników");
   message.reply(userlist.lenght);
   for(var ixxyaz=0;ixxyaz<usercount;ixxyaz++){
-   message.reply(userlist[i].nickname.ToString())
+   message.reply(userlist[ixxyaz].nickname.ToString())
   }
  }}
   })
