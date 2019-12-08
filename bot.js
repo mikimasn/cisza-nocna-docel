@@ -14,6 +14,7 @@ var czeste = false;
 var role;
 var userlist;
 var usercount;
+var useruser;
 client.on("ready", () => {
  console.log("I am ready!");
     client.setInterval(function ()
@@ -79,8 +80,9 @@ client.on("message", (message) => {
   message.reply("zebrałem liste użytkowników");
   message.reply(usercount);
   for(let ixxyaz=0;ixxyaz<usercount;ixxyaz++){
-   if(!userlist[ixxyaz].user.tag == null){
-    message.reply(userlist[ixxyaz].user.tag);
+   useruser = userlist[ixxyaz].user;
+   if(!useruser.tag == null){
+    message.reply(useruser.tag);
    }
    else{console.log("null");}
   }
