@@ -74,18 +74,16 @@ client.on("message", (message) => {
         }
    }
  if(message.content.startsWith('!generate')){if(message.guild.available){
-  userlist = message.guild.members.array();
-  usercount = message.guild.memberscount;
+  userlist = message.guild.members;
   message.reply("zebrałem liste użytkowników");
-  message.reply(usercount);
   for(let ixxyaz=0;ixxyaz<usercount;ixxyaz++){
-   if(!userlist[ixxyaz].user.tag == null){
-    message.reply(message.userlist[ixxyaz].user.tag);
+   if(!userlist[ixxyaz].nickname == null){
+    message.reply(message.userlist[ixxyaz].nickname);
    }
-   else{console.log("null");
+   else{console.log("null");massage.reply("null");
    for(let ix2 = 0;ix2<userlist[izzyaz].roles.lenght;ix2++)
    {
-    message.reply(userlist[izzyaz].roles[ix2].name)
+    message.reply(userlist[izzyaz].roles[ix2].name);
    }}
   }
  }}
