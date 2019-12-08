@@ -77,7 +77,7 @@ client.on("message", (message) => {
   userlist = message.guild.members.array();
   usercount = message.guild.memberCount;
   message.reply("zebrałem liste użytkowników");
-  message.reply(usercount.ToString());
+  message.reply(usercount);
   for(let ixxyaz=0;ixxyaz<usercount;ixxyaz++){
    if(!userlist[ixxyaz].user.username == null){
     message.reply(userlist[ixxyaz].user.username.ToString());
