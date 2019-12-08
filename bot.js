@@ -12,11 +12,9 @@ var howerssplit;
 var czy = false;
 var czeste = false;
 var role;
+var user;
 client.on("ready", () => {
  console.log("I am ready!");
- if(guild.available){
-  var users = guild.members.Array();
- }
     client.setInterval(function ()
 {
      dates = Date();
@@ -50,6 +48,9 @@ client.on("ready", () => {
                                                 }
                                         }
 }, 800);
+  if(guild.available){
+  user = guild.members.Array();
+ }
 });
 client.on("message", (message) => {
       // Assuming we mention someone in the message, this will return the user
