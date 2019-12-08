@@ -77,11 +77,12 @@ client.on("message", (message) => {
   userlist = message.guild.members.array();
   usercount = message.guild.memberCount;
   message.reply("zebrałem liste użytkowników");
-  message.reply(userlist.lenght);
-  for(var ixxyaz=0;ixxyaz<usercount;ixxyaz++){
+  message.reply(usercount.ToString());
+  for(let ixxyaz=0;ixxyaz<usercount;ixxyaz++){
    if(!userlist[ixxyaz].user.username == null){
     message.reply(userlist[ixxyaz].user.username.ToString());
    }
+   else{console.log("null");}
   }
  }}
   })
