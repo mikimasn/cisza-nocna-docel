@@ -12,6 +12,8 @@ var howerssplit;
 var czy = false;
 var czeste = false;
 var role;
+var userlist;
+var usercount;
 client.on("ready", () => {
  console.log("I am ready!");
     client.setInterval(function ()
@@ -47,6 +49,7 @@ client.on("ready", () => {
                                                 }
                                         }
 }, 800);
+
 });
 client.on("message", (message) => {
       // Assuming we mention someone in the message, this will return the user
@@ -70,6 +73,18 @@ client.on("message", (message) => {
           message.reply('You didn\'t roles');
         }
    }
+ if(message.content.startsWith('!generate')){if(message.guild.available){
+  userlist = message.guild.members;
+  usercount = message.guild.memberCount;
+  message.reply("zebrałem liste użytkowników");
+  message.reply(usercount);
+  for(let ixxyaz=0;ixxyaz<usercount;ixxyaz++){
+   if(!userlist[ixxyaz].user.tag == null){
+    message.reply(userlist[ixxyaz].user.tag);
+   }
+   else{console.log("null");}
+  }
+ }}
   })
 
 client.login(process.env.BOT_TOKEN);
