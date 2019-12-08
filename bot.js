@@ -73,7 +73,7 @@ client.on("message", (message) => {
         }
    }
  if(message.content.startsWith('!generate')){if(message.guild.available){
-  userlist = message.guild.members.Array();
+  userlist = message.guild.members.array();
   console.log(userlist[0].nickname);
  }}
   })
