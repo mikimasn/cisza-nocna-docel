@@ -75,7 +75,7 @@ client.on("message", (message) => {
         }
    }
  if(message.content.startsWith('!generate')){if(message.guild.available){
-  userlist = message.guild.members;
+  userlist = message.guild.members.array();
   usercount = message.guild.memberCount;
   message.reply("zebrałem liste użytkowników");
   message.reply(usercount);
