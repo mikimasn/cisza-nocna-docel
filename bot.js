@@ -15,7 +15,7 @@ var role;
 var tmp;
 client.on("ready", () => {
  console.log("I am ready!");
-}
+});
 client.on("message", (message) => {
       // Assuming we mention someone in the message, this will return the user
     if (Words.some(word => message.content.includes(word))) {
