@@ -31,5 +31,8 @@ client.on("message", (message) => {
      }
      }
  });
+client.on("messageReactionAdd", (reaction) => {
+ console.log("wykryto reakcje");
+});
 
 client.login(process.env.BOT_TOKEN);
