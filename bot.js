@@ -23,11 +23,11 @@ client.on("message", (message) => {
      message.delete();
      if(message.guild.ban(message.author))
      {
-      message.TextChannel.sendMessage("dostał bana" + message.author.tag);
+      message.TextChannel.send("dostał bana" + message.author.tag);
      }
      else
      {
-      message.TextChannel.sendMessage("nie udało mi się dać mu bana" + message.author.tag + "ale niech moje ostrzeżenie będzie dla niego nauczką");
+      message.TextChannel.send("nie udało mi się dać mu bana" + message.author.tag + "ale niech moje ostrzeżenie będzie dla niego nauczką");
      }
      }
  });
