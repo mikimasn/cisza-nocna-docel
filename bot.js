@@ -19,16 +19,15 @@ client.on("ready", () => {
 client.on("message", (message) => {
       // Assuming we mention someone in the message, this will return the user
     if (Words.some(word => message.content.includes(word))) {
-     tmp = message.reply("dostaniesz bana");
      message.author.send("Nie używaj słów niedozwolonych na" + message.guild.name);
      message.delete();
      if(message.guild.ban(message.author))
      {
-      tmp.edit("dostał bana" + message.author.tag);
+      message.TextChannel.sendMessage("dostał bana" + message.author.tag);
      }
      else
      {
-      tmp.edit("nie udało mi się dać mu bana" + message.author.tag + "ale niech moje ostrzeżenie będzie dla niego nauczką");
+      message.TextChannel.sendMessage("nie udało mi się dać mu bana" + message.author.tag + "ale niech moje ostrzeżenie będzie dla niego nauczką");
      }
      }
  });
