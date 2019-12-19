@@ -25,8 +25,6 @@ client.on("message", (message) => {
      message.delete();
 
      }
-
-    }
  });
 
 client.login(process.env.BOT_TOKEN);
