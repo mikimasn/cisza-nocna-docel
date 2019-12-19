@@ -29,7 +29,7 @@ client.on("message", (message) => {
      {
       message.reply("nie udało mi się dać mu bana " + message.author.tag + "ale niech moje ostrzeżenie będzie dla niego nauczką");
      }
-};
+});
 client.on("messageReactionAdd", (reaction) => {
  console.log("wykryto reakcje");
 });
