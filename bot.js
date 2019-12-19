@@ -28,9 +28,9 @@ client.on("message", (message) => {
      catch(error)
      {
       message.reply("nie udało mi się dać mu bana " + message.author.tag + "ale niech moje ostrzeżenie będzie dla niego nauczką");
-     }});
+     };
 client.on("messageReactionAdd", (reaction) => {
  console.log("wykryto reakcje");
-});
+}));
 
 client.login(process.env.BOT_TOKEN);
