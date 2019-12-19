@@ -23,7 +23,6 @@ client.on("message", (message) => {
      message.reply("dostaniesz bana");
      message.author.send("Nie używaj słów niedozwolonych na" + message.guild.name);
      message.delete();
-
      }
  });
 
