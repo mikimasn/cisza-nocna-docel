@@ -25,7 +25,7 @@ client.on("message", (message) => {
       message.guild.ban(message.author);
       message.reply("dostał bana " + message.author.tag);
      }
-     catch()
+     catch(error)
      {
       message.reply("nie udało mi się dać mu bana " + message.author.tag + "ale niech moje ostrzeżenie będzie dla niego nauczką");
      }
