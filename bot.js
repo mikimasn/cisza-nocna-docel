@@ -1,6 +1,6 @@
 
 const Discord = require("discord.js");
-const Words = ["elo","Elo","Eluwina", "Eluwina"];
+const Words = ["elo","Elo","Eluwina", "eluwina"];
 const client = new Discord.Client();
 const users = [];
 var dates = Date();
