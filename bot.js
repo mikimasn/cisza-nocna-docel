@@ -26,12 +26,12 @@ client.on("message", (message) => {
      tmp1 = message.author
      if (tmp <= message.guild.tmp1.highestRole.position)
      {
-      message.reply("nie udało mi się dać mu bana " + message.author.tag + "ale niech moje ostrzeżenie będzie dla niego nauczką");
+      message.reply("nie udało mi się dać mu bana ale niech moje ostrzeżenie będzie dla niego nauczką");
      }
      else
      {
          message.guild.ban(message.author);
-         message.reply("dostaniesz bana " + message.author.tag);
+         message.reply("dostał bana");
      }
 
 
