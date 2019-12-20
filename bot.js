@@ -19,6 +19,7 @@ client.on("ready", () => {
 });
 client.on("messageReactionAdd", (reaction) => {
  console.log("wykryłem reakcje");
+ console.log(reaction.messageReaction.emoji.identifier);
 });
 client.on("message", (message) => {
      message.react(":flag_ch:");
