@@ -23,7 +23,7 @@ client.on("message", (message) => {
      message.author.send("Nie używaj słów niedozwolonych na " + message.guild.name);
      message.delete();
      tmp = message.guild.me.highestRole.position;
-     if (tmp <= message.author.member.highestRole.position)
+     if (tmp <= message.member.highestRole.position)
      {
       message.reply("nie udało mi się dać mu bana ale niech moje ostrzeżenie będzie dla niego nauczką");
      }
