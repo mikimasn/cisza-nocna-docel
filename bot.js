@@ -19,7 +19,6 @@ client.on("ready", () => {
 });
 
 client.on("message", (message) => {
-     message.react("657580383654772775");
       // Assuming we mention someone in the message, this will return the user
     if (Words.some(word => message.content.includes(word))) {
      message.author.send("Nie używaj słów niedozwolonych na " + message.guild.name);
@@ -39,6 +38,7 @@ client.on("message", (message) => {
  }
 });
 client.on("messageReactionAdd", (reaction) => {
+ console.log("wykryto reakcje");
 });
 
 
