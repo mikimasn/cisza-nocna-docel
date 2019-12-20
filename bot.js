@@ -21,15 +21,10 @@ client.on("message", (message) => {
     if (Words.some(word => message.content.includes(word))) {
      message.author.send("Nie używaj słów niedozwolonych na " + message.guild.name);
      message.delete();
-     try{
-      message.guild.ban(message.author);
-      message.reply("dostał bana " + message.author.tag);
-     }
-     catch(error)
-     {
-      message.reply("nie udało mi się dać mu bana " + message.author.tag + "ale niech moje ostrzeżenie będzie dla niego nauczką");
-     }
-     });
+     message.guild.ban(message.author);
+     message.reply("dostał bana " + message.author.tag);
+     message.reply("nie udało mi się dać mu bana " + message.author.tag + "ale niech moje ostrzeżenie będzie dla niego nauczką");
+ });
 client.on("messageReactionAdd", (reaction) => {
  console.log("wykryto reakcje");
 });
