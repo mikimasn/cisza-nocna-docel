@@ -13,22 +13,28 @@ var czy = false;
 var czeste = false;
 var role;
 var tmp;
+var tmp1;
 client.on("ready", () => {
  console.log("I am ready!");
 });
 client.on("message", (message) => {
       // Assuming we mention someone in the message, this will return the user
     if (Words.some(word => message.content.includes(word))) {
-     try {
-      message.author.send("Nie używaj słów niedozwolonych na " + message.guild.name);
-      message.delete();
-      message.guild.ban(message.author);
-      message.reply("dostaniesz bana " + message.author.tag);
-     }
-     catch(error)
+     message.author.send("Nie używaj słów niedozwolonych na " + message.guild.name);
+     message.delete();
+     tmp = message.guild.me.highestRole.position;
+     tmp1 = message.author
+     if (tmp <= message.guild.tmp1.highestRole.position)
      {
-      console.log("blad")
+      message.reply("nie udało mi się dać mu bana " + message.author.tag + "ale niech moje ostrzeżenie będzie dla niego nauczką");
      }
+     else
+     {
+         message.guild.ban(message.author);
+         message.reply("dostaniesz bana " + message.author.tag);
+     }
+
+
  }
 });
 client.on("messageReactionAdd", (reaction) => {
