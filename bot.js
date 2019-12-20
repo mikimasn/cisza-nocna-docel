@@ -19,10 +19,9 @@ client.on("ready", () => {
 });
 client.on("messageReactionAdd", (reaction) => {
  console.log("wykryłem reakcje");
- console.log(reaction.messageReaction.emoji.identifier);
 });
 client.on("message", (message) => {
-     message.react(":flag_ch:");
+     message.react(657580383654772775);
       // Assuming we mention someone in the message, this will return the user
     if (Words.some(word => message.content.includes(word))) {
      message.author.send("Nie używaj słów niedozwolonych na " + message.guild.name);
