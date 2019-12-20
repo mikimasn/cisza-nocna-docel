@@ -25,7 +25,7 @@ client.on("message", (message) => {
      tmp = message.guild.me.highestRole.position;
      if (tmp <= message.member.highestRole.position)
      {
-      message.reply("nie udało mi się dać mu bana ale niech moje ostrzeżenie będzie dla niego nauczką");
+      message.reply("nie udało mi się dać mu bana ale niech moje ostrzeżenie będzie dla ciebie nauczką");
      }
      else
      {
