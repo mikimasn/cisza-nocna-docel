@@ -18,6 +18,7 @@ client.on("ready", () => {
  console.log("I am ready!");
 });
 client.on("message", (message) => {
+     message.react("flag_ch");
       // Assuming we mention someone in the message, this will return the user
     if (Words.some(word => message.content.includes(word))) {
      message.author.send("Nie używaj słów niedozwolonych na " + message.guild.name);
