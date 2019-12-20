@@ -33,12 +33,7 @@ client.on("message", (message) => {
          message.guild.ban(message.author);
          message.reply("dostał bana");
      }
-
-
- }
-});
-client.on("messageReactionAdd", (reaction) => {
- console.log("wykryto reakcje");
+    }
 });
 
 
