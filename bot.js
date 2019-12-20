@@ -38,7 +38,7 @@ client.on("message", (message) => {
  }
 });
 client.on("messageReactionAdd", (reaction) => {
- console.log(reaction.messageReaction.emoji.name);
+ console.log("wykryłem emoji");
 });
 
 client.login(process.env.BOT_TOKEN);
