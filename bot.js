@@ -10,7 +10,7 @@ const client = new Discord.Client();
  */
 client.on('ready', () => {
   console.log('I am ready!');
-  client.user.setGame("created for nati server:)");
+  client.user.setStatus("created for nati server:)");
 });
 
 // Create an event listener for messages
