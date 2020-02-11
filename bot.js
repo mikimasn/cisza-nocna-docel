@@ -11,7 +11,7 @@ const client = new Discord.Client();
  */
 client.on('ready', () => {
   console.log('I am ready!');
-  client..setActivity("Serwer maksa","WATCHING");
+  client.setActivity("Serwer maksa","WATCHING");
 });
 
 // Create an event listener for messages
