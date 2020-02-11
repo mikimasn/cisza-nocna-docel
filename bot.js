@@ -11,25 +11,13 @@ const client = new Discord.Client();
  */
 client.on('ready', () => {
   console.log('I am ready!');
-  client.user.setGame("created for nati server:)");
+  
 });
 
 // Create an event listener for messages
 client.on('message', message => {
-  // If the message is "ping"
-  if (message.content === 'ping') {
-    // Send "pong" to the same channel
-    message.channel.send('pong');
-  }
-   if (message.content.startsWith('!setgame')) {
-     tmp = message.content.split(' ');
-     for(i=1;i<tmp.lenght;i++)
-     {
-       tmp2 = tmp2+tmp[i];
-     }
-     client.setGame(tmp2);
+  message.react('676697969520803840');
    
-   }
 });
 
 client.login(process.env.BOT_TOKEN);
