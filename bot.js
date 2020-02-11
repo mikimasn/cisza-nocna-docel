@@ -16,9 +16,8 @@ client.on('ready', () => {
 // Create an event listener for messages
 client.on('message', message => {
   // If the message is "ping"
-  message.react('🤔')
-  .then(console.log)
-  .catch(console.error);
+  message.react('676703704916951050');
+  
 });
 
 client.login(process.env.BOT_TOKEN);
