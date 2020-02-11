@@ -19,8 +19,6 @@ client.on('message', message => {
   message.react('🤔')
   .then(console.log)
   .catch(console.error);
-   
-   }
 });
 
 client.login(process.env.BOT_TOKEN);
