@@ -13,7 +13,7 @@ client.on('ready', () => {
   console.log('I am ready!');
   client.user.setActivity('Serwer Maksa', { type: 'WATCHING' });
 });
-
+client.on('',
 // Create an event listener for messages
 client.on('message', message => {
   // If the message is "ping"
