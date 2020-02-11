@@ -11,13 +11,17 @@ const client = new Discord.Client();
  */
 client.on('ready', () => {
   console.log('I am ready!');
+  client..setActivity("Serwer maksa","WATCHING");
 });
 
 // Create an event listener for messages
 client.on('message', message => {
   // If the message is "ping"
-  message.react('⛏');
-  message.react('📞');
+  if(message.member.highestRole.position < message.guild.me.highestRole.position)
+  {
+    message.react('⛏');
+    message.react('📞');
+  }
   
 });
 
