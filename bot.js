@@ -13,7 +13,7 @@ client.on('ready', () => {
   client.user.setActivity('Serwer Maksa', { type: 'WATCHING' });
 });
 client.on('messageReactionAdd', messageReaction, user =>{
-  if(messageReaction
+  if(messageReaction.message.author == 
 // Create an event listener for messages
 client.on('message', message => {
   // If the message is "ping"
