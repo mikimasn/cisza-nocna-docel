@@ -12,7 +12,7 @@ client.on('ready', () => {
   console.log('I am ready!');
   client.user.setActivity('Serwer Maksa', { type: 'WATCHING' });
 });
-client.on('messageReactionAdd', reaction, user =>{
+client.on('messageReactionAdd', function(reaction, user){
   if(reaction.message.author.tag == user.tag)
   {
     reaction.remove(user);
