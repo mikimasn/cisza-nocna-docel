@@ -1,5 +1,4 @@
-var tmp
-var tmp2
+
 const Discord = require('discord.js');
 
 // Create an instance of a Discord client
@@ -13,7 +12,8 @@ client.on('ready', () => {
   console.log('I am ready!');
   client.user.setActivity('Serwer Maksa', { type: 'WATCHING' });
 });
-client.on('',
+client.on('messageReactionAdd', messageReaction, user =>{
+  if(messageReaction
 // Create an event listener for messages
 client.on('message', message => {
   // If the message is "ping"
