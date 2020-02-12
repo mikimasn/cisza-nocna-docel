@@ -17,6 +17,7 @@ client.on('messageReactionAdd', messageReaction, user =>{
   {
     messageReaction.remove(user);
   }
+});
 // Create an event listener for messages
 client.on('message', message => {
   // If the message is "ping"
