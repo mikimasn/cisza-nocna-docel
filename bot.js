@@ -12,10 +12,10 @@ client.on('ready', () => {
   console.log('I am ready!');
   client.user.setActivity('Serwer Maksa', { type: 'WATCHING' });
 });
-client.on('messageReactionAdd', messageReaction =>{
-  if(messageReaction.message.author.tag == user.tag)
+client.on('messageReactionAdd', {messageReaction:reaction, user:user} =>{
+  if(reaction.message.author.tag == user.tag)
   {
-    messageReaction.remove(user);
+    reaction.remove(user);
   }
 });
 // Create an event listener for messages
