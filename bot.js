@@ -22,16 +22,16 @@ client.on('messageReactionAdd', function(reaction, user){
       reaction.remove(user);
       return;
     }
-    else
-    {
-      if(reaction.emoji == '📞')
-      {
-        var tmp;
-        tmp = zgloszenia_ch.send("wysłano zgłoszenie wiadomości urzytkownika "+reaction.message.author.tag+" o treści "+reaction.message.content+" id urzytkownika: "+reaction.message.author.id);
-        zgloszenia_ch.send( "przez urzytkownika"+user.tag+"o id"+user.id+"koniec");
-        reaction.remove(user);
-      }
-    }
+    else if(user.id == "651052638900846613")
+    {return;}
+     if(reaction.emoji == '📞')
+     {
+       var tmp;
+       tmp = zgloszenia_ch.send("wysłano zgłoszenie wiadomości urzytkownika "+reaction.message.author.tag+" o treści "+reaction.message.content+" id urzytkownika: "+reaction.message.author.id);
+       zgloszenia_ch.send( "przez urzytkownika "+user.tag+" o id "+user.id);
+       reaction.remove(user);
+     }
+      
   }
 });
 // Create an event listener for messages
