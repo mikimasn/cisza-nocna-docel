@@ -22,7 +22,11 @@ client.on('messageReactionAdd', function(reaction, user){
       reaction.remove(user);
       return;
     }
-    
+    if(reaction.emoji == '📞')
+    {
+      var tmp;
+      tmp = zgloszenia_ch.send("wysłano zgłoszenie wiadomości urzytkownika ${reaction.message.author.tag} o treści ${reaction.message.text} id urzytkownika: ${reaction.message.author.id};
+    }
   }
 });
 // Create an event listener for messages
