@@ -4,6 +4,8 @@ const Discord = require('discord.js');
 // Create an instance of a Discord client
 const client = new Discord.Client();
 var sad_ch;
+var sad_role;
+var zgloszenia_ch;
 /**
  * The ready event is vital, it means that only _after_ this will your bot start reacting to information
  * received from Discord
@@ -32,7 +34,35 @@ client.on('message', message => {
     message.react('⛏');
     message.react('📞');
   }
-  if (message.content === '!set') {
+  if (message.content === '!setsad') {
+     if(message.member.highestRole.position >= message.guild.me.highestRole.position)
+     {
+      sad_ch = message.channel;
+      message.reply("ustawiono");
+      message.delete();
+     }
+    else
+    {
+      message.delete();
+      message.reply("nie masz uprawnień do użycia tego");
+    }
+
+  }
+    if (message.content === '!setzg') {
+     if(message.member.highestRole.position >= message.guild.me.highestRole.position)
+     {
+      zgloszenia_ch = message.channel;
+      message.reply("ustawiono");
+      message.delete();
+     }
+    else
+    {
+      message.delete();
+      message.reply("nie masz uprawnień do użycia tego");
+    }
+
+  }
+    if (message.content === '!setsr') {
      if(message.member.highestRole.position >= message.guild.me.highestRole.position)
      {
       sad_ch = message.channel;
