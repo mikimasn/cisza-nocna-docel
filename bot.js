@@ -29,7 +29,7 @@ client.on('messageReactionAdd', function(reaction, user){
        var tmp;
        tmp = zgloszenia_ch.send("wysłano zgłoszenie wiadomości urzytkownika "+reaction.message.author.tag+" o treści '"+reaction.message.content+"' id urzytkownika: "+reaction.message.author.id);
        zgloszenia_ch.send( "przez urzytkownika "+user.tag+" o id "+user.id);
-       zgloszenia_ch.send("wysłana o" + reaction.message.createdAt+"nazwa kanału wiadomości "+reaction.message.channel.name+" id kanału "+reaction.message.channel.id + "id wiadomości" + reaction.message.id);
+       zgloszenia_ch.send("wysłana o '" + reaction.message.createdAt+"' nazwa kanału wiadomości '"+reaction.message.channel.name+"' id kanału '"+reaction.message.channel.id + "' id wiadomości '" + reaction.message.id + "' kategoria kanału wiadomości '" + reaction.message.parent.name);
        reaction.remove(user);
      }
       
