@@ -26,14 +26,7 @@ client.on('messageReactionAdd', function(reaction, user){
 // Create an event listener for messages
 client.on('message', message => {
   // If the message is "ping"
-  if(message.member.highestRole.position < message.guild.me.highestRole.position)
-  {
-    message.react('⛏');
-    message.react('📞');
-  }
-  if (message.content === '!set') {
-    // Send "pong" to the same channel
-    if(message.member.highestRole.position < message.guild.me.highestRole.position)
+     if(message.member.highestRole.position < message.guild.me.highestRole.position)
      {
       sad_ch = message.channel;
       message.reply("ustawiono");
@@ -44,6 +37,14 @@ client.on('message', message => {
       message.delete();
       message.reply("nie masz uprawnień do użycia tego");
     }
+  if(message.member.highestRole.position < message.guild.me.highestRole.position)
+  {
+    message.react('⛏');
+    message.react('📞');
+  }
+  if (message.content === '!set') {
+    // Send "pong" to the same channel
+
   }
 });
 
