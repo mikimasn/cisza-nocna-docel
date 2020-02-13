@@ -33,9 +33,17 @@ client.on('message', message => {
   }
   if (message.content === '!set') {
     // Send "pong" to the same channel
-    sad_ch = message.channel;
-    message.reply("ustawiono");
-    message.delete();
+    if(message.member.highestRole.position < message.guild.me.highestRole.position)
+     {
+      sad_ch = message.channel;
+      message.reply("ustawiono");
+      message.delete();
+     }
+    else
+    {
+      message.delete();
+      message.reply("nie masz uprawnień do użycia tego");
+    }
   }
 });
 
