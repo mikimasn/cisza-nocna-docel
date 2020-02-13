@@ -22,11 +22,15 @@ client.on('messageReactionAdd', function(reaction, user){
       reaction.remove(user);
       return;
     }
-    if(reaction.emoji == '📞')
+    else
     {
-      var tmp;
-      tmp = zgloszenia_ch.send("wysłano zgłoszenie wiadomości urzytkownika "+reaction.message.author.tag+" o treści "+reaction.message.content+" id urzytkownika: "+reaction.message.author.id);
-      zgloszenia_ch.send( "przez urzytkownika"+user.tag+"o id"+user.id+"koniec");
+      if(reaction.emoji == '📞')
+      {
+        var tmp;
+        tmp = zgloszenia_ch.send("wysłano zgłoszenie wiadomości urzytkownika "+reaction.message.author.tag+" o treści "+reaction.message.content+" id urzytkownika: "+reaction.message.author.id);
+        zgloszenia_ch.send( "przez urzytkownika"+user.tag+"o id"+user.id+"koniec");
+        reaction.remove(user);
+      }
     }
   }
 });
