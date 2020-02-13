@@ -25,7 +25,7 @@ client.on('messageReactionAdd', function(reaction, user){
     if(reaction.emoji == '📞')
     {
       var tmp;
-      tmp = zgloszenia_ch.send("wysłano zgłoszenie wiadomości urzytkownika "+reaction.message.author.tag+" o treści "+reaction.message.text+" id urzytkownika: "+reaction.message.author.id);
+      tmp = zgloszenia_ch.send("wysłano zgłoszenie wiadomości urzytkownika "+reaction.message.author.tag+" o treści "+reaction.message.content+" id urzytkownika: "+reaction.message.author.id);
     }
   }
 });
