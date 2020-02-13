@@ -13,9 +13,13 @@ client.on('ready', () => {
   client.user.setActivity('Serwer Maksa', { type: 'WATCHING' });
 });
 client.on('messageReactionAdd', function(reaction, user){
-  if(reaction.message.author.tag == user.tag)
+  if(reaction.emoji == '📞' || reaction.emoji == '⛏')
   {
-    reaction.remove(user);
+    if(reaction.message.author.id == user.id)
+    {
+      reaction.remove(user);
+      return;
+    }
   }
 });
 // Create an event listener for messages
