@@ -27,9 +27,13 @@ client.on('messageReactionAdd', function(reaction, user){
      if(reaction.emoji == '📞')
      {
        var tmp;
-       tmp = zgloszenia_ch.send("wysłano zgłoszenie wiadomości urzytkownika "+reaction.message.author.tag+" o treści '"+reaction.message.content+"' id urzytkownika: "+reaction.message.author.id);
+       zgloszenia_ch.send("wysłano zgłoszenie wiadomości urzytkownika "+reaction.message.author.tag+" o treści '"+reaction.message.content+"' id urzytkownika: "+reaction.message.author.id);
        zgloszenia_ch.send( "przez urzytkownika "+user.tag+" o id "+user.id);
        zgloszenia_ch.send("wysłana o '" + reaction.message.createdAt+"' nazwa kanału wiadomości '"+reaction.message.channel.name+"' id kanału '"+reaction.message.channel.id + "' id wiadomości '" + reaction.message.id);
+       tmp = zgloszenia_ch.send(user.id);
+       tmp.react('🎵');
+       tmp.react('🅱');
+       tmp.react('🦶');
        reaction.remove(user);
      }
       
