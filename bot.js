@@ -12,7 +12,7 @@ var zgloszenia_ch;
  */
 client.on('ready', () => {
   console.log('I am ready!');
-  client.user.setActivity('Serwer Maksa', { type: 'WATCHING' });
+  client.user.setActivity('Świat Pingwinów', { type: 'WATCHING' });
 });
 client.on('messageReactionAdd', function(reaction, user){
   if(reaction.emoji == '📞' || reaction.emoji == '⛏')
