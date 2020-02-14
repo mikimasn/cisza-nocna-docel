@@ -79,8 +79,11 @@ client.on('message', message => {
     // If we have a user mentioned
     if (role) {
       sad_role = role;
+      message.reply("ustawiono");
+      message.delete();
     } else {
       message.reply('nie podałeś roli');
+      message.delete();
     }
      }
     else
