@@ -30,7 +30,7 @@ client.on('messageReactionAdd', function(reaction, user){
        zgloszenia_ch.send("wysłano zgłoszenie wiadomości urzytkownika "+reaction.message.author.tag+" o treści '"+reaction.message.content+"' id urzytkownika: "+reaction.message.author.id);
        zgloszenia_ch.send( "przez urzytkownika "+user.tag+" o id "+user.id);
        zgloszenia_ch.send("wysłana o '" + reaction.message.createdAt+"' nazwa kanału wiadomości '"+reaction.message.channel.name+"' id kanału '"+reaction.message.channel.id + "' id wiadomości '" + reaction.message.id);
-       tmp = zgloszenia_ch.send(user.id);
+       tmp = zgloszenia_ch.send("# " + user.id);
        tmp.react('🎵');
        tmp.react('🅱');
        tmp.react('🦶');
@@ -42,7 +42,15 @@ client.on('messageReactionAdd', function(reaction, user){
 // Create an event listener for messages
 client.on('message', message => {
   // If the message is "ping"
-
+    if(message.author.id == "651052638900846613")
+  {
+    if(message.content.startsWith('#')
+       {
+        message.react('🎵');
+        message.react('🅱');
+        message.react('🦶');
+       }
+      }
   if(message.member.highestRole.position < message.guild.me.highestRole.position)
   {
     message.react('⛏');
