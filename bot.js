@@ -44,7 +44,7 @@ client.on('message', message => {
   // If the message is "ping"
     if(message.author.id == "651052638900846613")
   {
-    if(message.content.startsWith('#')
+    if(message.content.startsWith('#'))
        {
         message.react('🎵');
         message.react('🅱');
