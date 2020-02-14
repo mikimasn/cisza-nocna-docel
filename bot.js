@@ -72,7 +72,7 @@ client.on('message', message => {
     }
 
   }
-    if (message.content === '!setsr') {
+    if (message.content.startsWith('!setsr')) {
      if(message.member.highestRole.position >= message.guild.me.highestRole.position)
      {
        const role = message.mentions.roles.first();
