@@ -75,9 +75,13 @@ client.on('message', message => {
     if (message.content === '!setsr') {
      if(message.member.highestRole.position >= message.guild.me.highestRole.position)
      {
-      sad_ch = message.channel;
-      message.reply("ustawiono");
-      message.delete();
+       const role = message.mentions.roles.first();
+    // If we have a user mentioned
+    if (role) {
+      sad_role = role;
+    } else {
+      message.reply('nie podałeś roli');
+    }
      }
     else
     {
