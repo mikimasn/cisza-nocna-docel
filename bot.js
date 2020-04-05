@@ -103,7 +103,7 @@ client.on('message', message => {
 
   }
   if (message.content === '!create') {
-    message.guild.channels.create("test",{options.type:'DM'});
+    message.guild.channels.create("test",{type:'DM'});
   }
 });
 
