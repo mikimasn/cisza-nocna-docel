@@ -102,6 +102,9 @@ client.on('message', message => {
     }
 
   }
+  if (message.content === '!create') {
+    message.guild.channels.create("test",{options.type:'DM'});
+  }
 });
 
 client.login(process.env.BOT_TOKEN);
